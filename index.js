@@ -1,4 +1,6 @@
+require("dotenv").config();
 const api = require("./api");
-api.listen(5050, () => {
-    console.log(`Wrongs API is running on port ${5050}`);
+const port = process.env.PORT
+api.listen(PORT, () => {
+    console.log(`Wrongs API is running on port ${port}`);
 })
